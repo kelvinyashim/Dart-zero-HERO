@@ -1,0 +1,5 @@
+void main (){
+//This is what you"ll mostly see in any dart program. This is th the main function
+print("Hello World");
+//The above code tells the compiler to print the text.
+}
