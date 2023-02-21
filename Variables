@@ -1,0 +1,8 @@
+//DATATYPES IN DART
+void main() {
+  int age = 25;
+  double height = 1.75;
+  num weight = 68;
+  String name = "John";
+  bool isStudent = true;
+}
