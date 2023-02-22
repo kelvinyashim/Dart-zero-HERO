@@ -1,0 +1,11 @@
+//This calculates force (Physics)
+void main() {
+  double mass = 10.0;
+  double acceleration = 5.0; 
+  double force = calculateForce(mass, acceleration);
+  print("The force is $force Newtons.");
+}
+
+double calculateForce(double mass, double acceleration) {
+  return mass * acceleration;
+}
