@@ -1,0 +1,14 @@
+// Define the main function, which is the entry point of the program.
+void main() {
+
+  // Create a list of integers called 'num' with the values [2, 4, 6, 8, 24].
+  List<int> num = [2, 4, 6, 8, 24];
+
+  // Add the integer 34 to the end of the 'num' list using the 'add()' method.
+  // Note their are other methods but now we use add().
+  num.add(34);
+  //Now the number 34 is added to the list above.
+
+  // Print the resulting 'num' list to the console.
+  print(num);
+}
