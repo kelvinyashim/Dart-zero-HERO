@@ -1,0 +1,14 @@
+// Import the necessary Flutter libraries
+import 'package:flutter/material.dart';
+
+// Define the main function, which is the entry point for the app
+void main() {
+  // Call the runApp() function, which takes a widget as its argument
+  runApp(
+    // Create an instance of the MaterialApp widget, which is a container for the app
+    MaterialApp(
+      // Set the home screen of the app to a Text widget with the message "Hello, World!"
+      home: Text('Hello, World!'),
+    ),
+  );
+}
