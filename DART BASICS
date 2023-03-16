@@ -1,0 +1,138 @@
+//Dart supports two types of compilations
+// 1. AOT (AHEAD OF TIME) 2. (JUST IN TIME)
+
+import "dart:io";
+main(){
+     print("what is your namme?");
+     String name = "Braun";
+     print("The name is $name");
+//     //String interpulation means to replace a value of 
+//     //    // a variable within a string
+
+// //TYPE CONVERSION
+// //String to int
+// //Note when you want to convert a string to any other data type
+// //Use var not String 
+// //Syntax is varName = datatype.parse(the var type value)
+ var boy = int.parse("1");
+ assert(boy == 1);
+// //The assert just confirms if the conversion was okay
+
+// // INT TO STRING
+ var num = 1.toString();
+// //Syntax varName = number.toString()
+ assert(num == '1');
+
+// var num2 = 350.toString();
+// assert(num2=="350");
+
+// //DOUBLE TO STRING
+// var k = 3.12555.toStringAsFixed(2);
+// //this means that the double value should be two sFigures
+// //and the number can be rounded up
+// print(k);
+
+// ///////////////////////////////////
+// // CONSTANT 
+// // A const variable means during the run the variable can't be changed
+
+// const aConstString = "kelvin"; 
+// const aConstDouble = 33.4; 
+// const aConstInt = 5;
+
+// print(aConstDouble);
+// print(aConstInt);
+// print(aConstString);
+//  //Now to know the type of the variables we use a method
+//  // Called runtimeType
+
+// print(aConstString.runtimeType);
+// var n ;
+// var number;
+// number = n?.num ?? 0;
+// print(number);
+// The ? implies that if n is a valid object then access the proprty num
+// Now this ?? implies that if n is invalid then 0 like an else statement
+
+
+
+
+
+
+
+
+
+
+
+
+//Tenary Operator
+
+
+int x = 100;
+var result = x % 2 == 0 ? 'Even' : 'odd';
+print(result);
+
+
+
+/*for(int i = 0; i < 10; i++){
+    if(i % 2 == 0) continue;
+    //The continue means if that condition is satisfied 
+    //Skip it continuue without printing it juust the ones that dont
+    //Satisfy it
+    print(i);
+}*/
+
+List <String> name = ["David", "kelvin"];
+//We can use var instead of list to put different data types in the list
+//Then the type would be an object
+
+//Lets create another list
+
+//var name2= name;
+
+//name[1] = "Joy";
+  //  print(name2);
+//So when we set a new list as a variable to the previous ones
+//We are cloning but if we want a new list that can
+//take different values we use spread operator
+
+var name3 = [...name];
+
+name[1] = "Anita";
+print(name3);
+//Once name 3 is printed it prints name values
+//it doesnt update to Anita because they are two different list
+
+
+//SETS IN DART
+
+var halogens = {"chlorine", "fluorine", "fluorine"};
+//The above code is identified as a set
+//Just like set in maths if you have two numbers that are exactly the statement
+//It is counted once
+//var halogens = {};
+//Now this is a map 
+//To make it a set we include a data type before
+//The curly brackets
+
+var halogens2 = <String> {};
+    print(halogens2.runtimeType);
+//Another way to define a set is 
+
+Set <String> Boys = {"kelvin,david,gabriel"};
+print(Boys);
+print(Boys.runtimeType);
+
+map
+Its a collection of key value pairs
+
+List <String> name5 = ["Kelvin", "David"];
+name5.remove([1]);
+    
+
+print(name5);
+} 
+//CLASS NULL AWARE OPERATOR
+class Num {
+    int num = 10;
+}
