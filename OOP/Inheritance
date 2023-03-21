@@ -1,0 +1,43 @@
+class Person {
+  String name;
+  int age;
+  String nationality;
+  
+  Person(this.name, this.age, this.nationality);
+  
+  void introduce() {
+    print("Hello, my name is $name. I am $age years old and I am from $nationality.");
+  }
+}
+
+class Student extends Person {
+  String school;
+  
+  Student(String name, int age, String nationality, this.school) : super(name, age, nationality);
+  
+  @override
+  void introduce() {
+    print("Hello, my name is $name. I am a student at $school. I am $age years old and I am from $nationality.");
+  }
+}
+
+class Teacher extends Person {
+  String subject;
+  
+  Teacher(String name, int age, String nationality, this.subject) : super(name, age, nationality);
+  
+  @override
+  void introduce() {
+    print("Hello, my name is $name. I am a teacher of $subject. I am $age years old and I am from $nationality.");
+  }
+}
+
+void main() {
+  Person person1 = new Person("John", 25, "USA");
+  Student student1 = new Student("Alice", 20, "UK", "Oxford University");
+  Teacher teacher1 = new Teacher("Mary", 35, "Canada", "Mathematics");
+  
+  person1.introduce();
+  student1.introduce();
+  teacher1.introduce();
+}
