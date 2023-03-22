@@ -1,0 +1,36 @@
+class Animal {
+  void makeSound() {
+    print('The animal makes a sound');
+  }
+}
+
+class Dog extends Animal {
+  @override
+  void makeSound() {
+    print('The dog barks');
+  }
+}
+
+class Cat extends Animal {
+  @override
+  void makeSound() {
+    print('The cat meows');
+  }
+}
+
+void main() {
+  Animal animal = new Animal();
+  animal.makeSound(); // The animal makes a sound
+
+  Dog dog = new Dog();
+  dog.makeSound(); // The dog barks
+
+  Cat cat = new Cat();
+  cat.makeSound(); // The cat meows
+
+  Animal someAnimal = new Dog();
+  someAnimal.makeSound(); // The dog barks
+
+  someAnimal = new Cat();
+  someAnimal.makeSound(); // The cat meows
+}
