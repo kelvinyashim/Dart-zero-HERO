@@ -1,0 +1,44 @@
+class Person {
+  // Private variables, denoted by an underscore prefix
+  String _name;
+  int _age;
+  
+  // Constructor that sets the private variables
+  Person(this._name, this._age);
+  
+  // Public getter method for the _name variable
+  String getName() {
+    return _name;
+  }
+  
+  // Public setter method for the _name variable
+  void setName(String name) {
+    _name = name;
+  }
+  
+  // Public getter method for the _age variable
+  int getAge() {
+    return _age;
+  }
+  
+  // Public setter method for the _age variable
+  void setAge(int age) {
+    // Check if age is a valid value before setting it
+    if (age >= 0) {
+      _age = age;
+    }
+  }
+}
+
+void main() {
+  // Create an object of the Person class and set its private variables
+  Person person = Person('Alice', 25);
+  
+  // Accessing public methods to get and set private variables
+  print(person.getName());  // Output: Alice
+  person.setName('Bob');
+  print(person.getName());  // Output: Bob
+  
+  person.setAge(-30); // Invalid age, age will not be set
+  print(person.getAge()); // Output: 25
+}
