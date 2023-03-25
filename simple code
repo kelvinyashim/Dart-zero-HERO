@@ -1,0 +1,25 @@
+int calculateSum({int start = 1, required int end}) {
+  int sum = 0;
+
+  for (int i = start; i <= end; i++) {
+    sum += i;
+  }
+
+  return sum;
+}
+
+void main() {
+  stdout.write('Enter the value of N: ');
+
+  try {
+    int n = int.parse(stdin.readLineSync()!);
+    if (n < 1) {
+      throw Exception('N must be a positive integer');
+    }
+    int sum = calculateSum(end: n);
+
+    print('The sum of numbers from 1 to $n is $sum');
+  } catch (e) {
+    print('Error: $e');
+  }
+}
